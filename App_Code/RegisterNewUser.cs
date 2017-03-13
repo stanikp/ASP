@@ -119,7 +119,7 @@ public class RegisterNewUser
                 smtp.Port = 587;
                 smtp.Send(mm);
             }
-            HttpContext.Current.Response.Redirect("~/Login.aspx") ;
+            HttpContext.Current.Response.Redirect("~/Login.aspx");
         }
     }
 
