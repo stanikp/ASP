@@ -49,7 +49,7 @@ public class RegisterNewUser
         {
             using (SqlCommand cmd = new SqlCommand("Insert_User"))
             {
-                using (SqlDataAdapter sda = new SqlDataAdapter()) \
+                using (SqlDataAdapter sda = new SqlDataAdapter()) 
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Username", Username);
@@ -76,7 +76,7 @@ public class RegisterNewUser
                     SendActivationEmail(userId);
                     break;
             }
-            page.ClientScript.RegisterStartupScript(page.GetType(), "alert", "alert('"+message+"');", true;)
+            page.ClientScript.RegisterStartupScript(page.GetType(), "alert", "alert('"+message+"');", true);
         }
     }
 
@@ -106,7 +106,7 @@ public class RegisterNewUser
                 mm.Subject = "Account Activation";
                 string body = "Hello " + Username.Trim() + ",";
                 body += "<br /><br />Please click the following link to activate your account";
-                body += "<br /><a href = '" + HttpContext.Current.Request.Url.AbsoluteUri.Replace("Register.aspx", "Login.aspx?ActivationCode=" + activationCode) + "'>Click here to activate your account.</a>";
+                body += "<br /><a href = '" + HttpContext.Current.Request.Url.AbsoluteUri.Replace("Register.aspx", "Login.aspx?ActivationCode=" + activationcode) + "'>Click here to activate your account.</a>";
                 body += "<br /><br />Thanks";
                 mm.Body = body;
                 mm.IsBodyHtml = true;
@@ -123,5 +123,4 @@ public class RegisterNewUser
         }
     }
 
-    }
 }
