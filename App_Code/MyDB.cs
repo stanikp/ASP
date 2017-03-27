@@ -60,4 +60,9 @@ public class MyDB
         // TODO: Add constructor logic here
         //
     }
+
+    public static void Insert(string text1, string text2, object text3, object fU_Image)
+    {
+        throw new NotImplementedException();
+    }
 }

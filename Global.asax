@@ -1,5 +1,2 @@
-﻿<%@ Application Language="C#" Inherits="Global"%>
+﻿<%@ Application Language="C#" Inherits="Global" %>
 
-<script runat="server">
-
-</script>
